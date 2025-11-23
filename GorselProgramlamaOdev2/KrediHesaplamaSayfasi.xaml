@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaOdev2.Views.KrediHesaplamaSayfasi" Title="Kredi Hesaplama"
+             BackgroundColor="#FFE6E8">
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+
+            <Label Text="Kredi Türü:" FontAttributes="Bold"/>
+            <Picker x:Name="pickerKrediTuru" Title="Kredi Türü Seçiniz">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>İhtiyaç Kredisi</x:String>
+                        <x:String>Taşıt Kredisi</x:String>
+                        <x:String>Konut Kredisi</x:String>
+                        <x:String>Ticari Kredi</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Kredi Tutarı (TL):" FontAttributes="Bold"/>
+            <Entry x:Name="entryTutar" Placeholder="Örn: 10000" Keyboard="Numeric"/>
+            <Label Text="Faiz Oranı (%):" FontAttributes="Bold"/>
+            <Entry x:Name="entryFaiz" Placeholder="Örn: 1.39" Keyboard="Numeric"/>
+            <Label x:Name="lblVade" Text="Vade (Ay): 12" FontAttributes="Bold"/>
+            <Slider x:Name="sliderVade" 
+                    Minimum="1" 
+                    Maximum="120" 
+                    Value="12" 
+                    ValueChanged="SliderVade_ValueChanged"/>
+            <Button Text="Krediyi Hesapla" 
+                    Clicked="ButtonHesapla_Clicked" Margin="0,20,0,10"/>
+
+            <BoxView HeightRequest="1" Color="LightGray"/>
+
+            <Label Text="HESAPLAMA SONUÇLARI" FontAttributes="Bold" FontSize="Medium"/>
+            <Label x:Name="lblSonuc" Text=""/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

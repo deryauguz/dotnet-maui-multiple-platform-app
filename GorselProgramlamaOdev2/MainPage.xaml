@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaOdev2.Views.MainPage"
+             Title="Ana Sayfa"
+             BackgroundColor="#FFE6E8">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="35" Padding="40" 
+                             HorizontalOptions="Center" 
+                             VerticalOptions="CenterAndExpand">
+
+
+            <Image Source="vesikalik.jpeg" 
+                       Aspect="AspectFill" 
+                       HeightRequest="155" 
+                       WidthRequest="155" />
+
+            <Label Text="Esma Derya UĞUZ" 
+                   FontSize="Title" 
+                   FontAttributes="Bold"
+                   TextColor="#800080" 
+                   HorizontalOptions="Center" />
+
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği" 
+                   FontSize="Medium" 
+                   TextColor="#4B0082" 
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="BSM352 ÖDEV-2" 
+                   FontSize="Small" 
+                   TextColor="#9370DB" 
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

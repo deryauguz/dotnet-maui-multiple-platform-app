@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselProgramlamaOdev2.Views.RenkSeciciSayfasi"
+             x:Name="ThisPage" 
+             Title="Renk Seçici">
+    <VerticalStackLayout Spacing="15" Padding="20">
+
+        <Label x:Name="LabelRed" Text="Kırmızı (Red): 100" FontAttributes="Bold"/>
+        <Slider x:Name="SliderRed" Minimum="0" Maximum="255" Value="100" 
+                ValueChanged="RenkSlider_ValueChanged"/>
+
+        <Label x:Name="LabelGreen" Text="Yeşil (Green): 100" FontAttributes="Bold"/>
+        <Slider x:Name="SliderGreen" Minimum="0" Maximum="255" Value="100"  
+                ValueChanged="RenkSlider_ValueChanged"/>
+
+        <Label x:Name="LabelBlue" Text="Mavi (Blue): 100" FontAttributes="Bold"/>
+        <Slider x:Name="SliderBlue" Minimum="0" Maximum="255" Value="100"  
+                ValueChanged="RenkSlider_ValueChanged"/>
+
+        <HorizontalStackLayout Spacing="10" Margin="0,20,0,10" HorizontalOptions="Center">
+            <Label x:Name="LabelRenkKodu" Text="#646464" FontSize="Large" FontAttributes="Bold"/>
+            <Button Text="Kopyala" Clicked="KopyalaButton_Clicked" HeightRequest="40" Padding="10,0"/>
+        </HorizontalStackLayout>
+
+        <Button Text="Rastgele Renk Oluştur" Clicked="RastgeleRenkButton_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
